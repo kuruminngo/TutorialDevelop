@@ -9,7 +9,9 @@
     <h1>User情報管理システム</h1>
     <h2>User更新</h2>
     <form method="post" th:action="@{/user/update/{id}/(id=${user.id})}" th:object="${user}">
+        <label for="ID">ID</label>
         <input type="hidden" th:field="*{id}">
+         <span th:text="*{id}"></span>
         <br>
 
         <label for="name">名前</label>
